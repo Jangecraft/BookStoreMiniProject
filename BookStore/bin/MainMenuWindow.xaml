@@ -1,0 +1,42 @@
+﻿<Window x:Class="BookStore.MainMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStore"
+        mc:Ignorable="d"
+        Title="MainMenuWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Background.png"/>
+        </Grid.Background>
+        <Button Content="Logout" HorizontalAlignment="Left" Margin="681,358,0,0" VerticalAlignment="Top" Width="92" Height="43" Click="Logout_Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="16,16,0,0" TextWrapping="Wrap" Text="ชื่อพนักงาน  : " VerticalAlignment="Top" Height="27" Width="113" FontSize="20"/>
+        <TextBlock x:Name="txtName" HorizontalAlignment="Left" Margin="129,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="644" FontSize="20" Text="Name"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="40,92,0,0" VerticalAlignment="Top" Width="174" Height="174" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="Customer_Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="UserIcon.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Margin="219,92,0,0" VerticalAlignment="Top" Width="174" Height="174" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="Book_Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="BookIcon.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Margin="398,92,0,0" VerticalAlignment="Top" Width="174" Height="174" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="Order_Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="ShoppingCartIcon.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="59,266,0,0" TextWrapping="Wrap" Text="จัดการข้อมูลลูกค้า" VerticalAlignment="Top" Height="24" Width="127" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="240,266,0,0" TextWrapping="Wrap" Text="จัดการข้อมูลหนังสือ" VerticalAlignment="Top" Height="24" Width="135" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="446,266,0,0" TextWrapping="Wrap" Text="สั่งซื้อหนังสือ" VerticalAlignment="Top" Height="24" Width="86" FontSize="18"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="577,92,0,0" VerticalAlignment="Top" Width="174" Height="174" Foreground="{x:Null}" BorderBrush="{x:Null}" Click="History_Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="PurchaseHistory.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="617,266,0,0" TextWrapping="Wrap" Text="ประวัติการซื้อ" VerticalAlignment="Top" Height="24" Width="91" FontSize="18"/>
+
+    </Grid>
+</Window>

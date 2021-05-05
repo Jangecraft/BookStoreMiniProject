@@ -1,0 +1,51 @@
+﻿<Window x:Class="BookStore.OrderBooksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStore"
+        mc:Ignorable="d"
+        Title="OrderBooksWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Background.png"/>
+        </Grid.Background>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="681,358,0,0" VerticalAlignment="Top" Width="92" Height="43" Click="Back_Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,16,0,0" TextWrapping="Wrap" Text="ชื่อพนักงาน  : " VerticalAlignment="Top" Height="27" Width="113" FontSize="20"/>
+        <TextBlock x:Name="txtName" HorizontalAlignment="Left" Margin="123,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="650" FontSize="20" Text="Name"/>
+        <Button Content="เลือก" HorizontalAlignment="Left" Margin="274,66,0,0" VerticalAlignment="Top" Width="54" Height="46" FontSize="16" Click="Search_Button_Click"/>
+        <TextBox x:Name="txtSearchIDBooks" HorizontalAlignment="Left" Height="46" Margin="114,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="91" FontSize="18"><Run Text="รหัส"/><Run Text="หนังสือ"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="99" FontSize="18"><Run Text="ชื่อ"/><Run Text="หนังสือ"/></TextBlock>
+        <TextBox x:Name="txtShowName" HorizontalAlignment="Left" Height="45" Margin="114,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" FontSize="18" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,171,0,0" TextWrapping="Wrap" Text="ข้อมูลหนังสือ" VerticalAlignment="Top" Height="46" Width="99" FontSize="18"/>
+        <TextBox x:Name="txtShowDescription" HorizontalAlignment="Left" Height="46" Margin="114,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" FontSize="18" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,222,0,0" TextWrapping="Wrap" Text="ราคาหนังสือ" VerticalAlignment="Top" Height="46" Width="99" FontSize="18"/>
+        <TextBox x:Name="txtShowPrice" HorizontalAlignment="Left" Height="46" Margin="114,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" FontSize="18" IsEnabled="False"/>
+        <Button Content="ยืนยัน" HorizontalAlignment="Left" Margin="719,66,0,0" VerticalAlignment="Top" Width="54" Height="46" FontSize="16" Click="Okay_Button_Click"/>
+        <TextBox x:Name="txtIDCustomer" HorizontalAlignment="Left" Height="46" Margin="569,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="482,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="82" FontSize="18" Text="รหัสสมาชิก"/>
+        <TextBox x:Name="txtAmount" HorizontalAlignment="Left" Height="46" Margin="345,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" FontSize="32" Text="0" TextAlignment="Center" FontWeight="Light" SpellCheck.IsEnabled="True"/>
+        <Button Content="V" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Margin="424,66,0,0" FontSize="14" Height="20" RenderTransformOrigin="0.5,0.5" Click="Increase_Button_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="V" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Margin="424,92,0,0" FontSize="14" Height="20" RenderTransformOrigin="0.5,0.5" Click="Decrease_Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="508,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="82" FontSize="18" Text="สรุปรายการ"/>
+        <TextBox x:Name="txtShowNumIDBooks" HorizontalAlignment="Left" Height="40" Margin="469,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontSize="20" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="373,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="91" FontSize="20"><Run Text="รหัส"/><Run Text="หนังสือ"/></TextBlock>
+        <TextBox x:Name="txtShowNumIDCustomer" HorizontalAlignment="Left" Height="40" Margin="469,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontSize="20" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="373,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="91" FontSize="20"><Run Text="รหัส"/><Run Text="สมาชิก"/></TextBlock>
+        <TextBox x:Name="txtShowNumAmount" HorizontalAlignment="Left" Height="40" Margin="469,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontSize="20" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="373,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="91" FontSize="20" Text="จำนวน"/>
+        <TextBox x:Name="txtShowNumPrice" HorizontalAlignment="Left" Height="40" Margin="469,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="282" FontSize="20" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="373,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="91" FontSize="20" Text="ราคา"/>
+
+    </Grid>
+</Window>

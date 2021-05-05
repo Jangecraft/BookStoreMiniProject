@@ -1,0 +1,32 @@
+﻿<Window x:Class="BookStore.PurchaseHistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStore"
+        mc:Ignorable="d"
+        Title="PurchaseHistoryWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Background.png"/>
+        </Grid.Background>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="681,358,0,0" VerticalAlignment="Top" Width="92" Height="43" Click="Back_Button_Click"/>
+        <ListView ItemsSource="{Binding Orders}" HorizontalAlignment="Left" Height="343" Margin="10,10,0,0" VerticalAlignment="Top" Width="773">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding ISBN}" Header="ISBM" Width="155">
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Customers_ID}" Width="155" Header="รหัสสมาชิก">
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Quatity}" Width="155" Header="จำนวนที่สั่งซื้อ">
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Total_Price}" Width="155" Header="ราคารวม">
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Personnel_Name}" Width="155" Header="พนักงานที่รับผิดชอบ">
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
